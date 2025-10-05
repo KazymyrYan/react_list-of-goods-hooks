@@ -46,15 +46,15 @@ export const App: React.FC = () => {
     setSortField(type);
   };
 
+  const reverseGoods = () => {
+    setGoods([...goods].reverse());
+    setIsReversed(prev => !prev);
+  };
+
   const resetGoods = () => {
     setGoods(initialGoods);
     setSortField(SortType.Reset);
     setIsReversed(false);
-  };
-
-  const reverseGoods = () => {
-    setGoods([...goods].reverse());
-    setIsReversed(prev => !prev);
   };
 
   return (
